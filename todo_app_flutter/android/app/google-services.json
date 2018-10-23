@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "175688444480",
+    "firebase_url": "https://todo-list-c45ee.firebaseio.com",
+    "project_id": "todo-list-c45ee",
+    "storage_bucket": "todo-list-c45ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175688444480:android:810179b82a9e7492",
+        "android_client_info": {
+          "package_name": "hr.digitalnomad.todoappflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175688444480-tg0ci4sj191gehpr66ur9kd94pomc9c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp0EpdfKC_EBmFFlnUyZIWnmxVERi6MjU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

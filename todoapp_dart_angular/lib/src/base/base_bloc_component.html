@@ -1,0 +1,20 @@
+<div
+        *ngIf="(baseBlock.progressVisible | async) == true"
+        class="flex-container center">
+    <material-spinner ></material-spinner>
+</div>
+<modal [visible]="(baseBlock.errorStream | async) != ''">
+    <material-dialog class="basic-dialog">
+        <h1 header>{{errorString}}</h1>
+        <p>
+            {{baseBlock.errorStream | async}}
+        </p>
+
+        <div footer>
+            <material-button autoFocus clear-size (trigger)="baseBlock.error.add('')">
+                {{close}}
+            </material-button>
+        </div>
+
+    </material-dialog>
+</modal>

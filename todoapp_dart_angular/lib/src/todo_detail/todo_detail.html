@@ -1,0 +1,32 @@
+<material-input
+        #title
+        label="{{titleStr}}"
+        ngModel="{{todoTitle}}"
+        (inputText)="todoTitle"
+        [error]="(todoAddEditBloc.todoErrorStream | async) == 0 ? titleErrString : ''"
+        autoFocus floatingLabel style="width:100%"
+        type="text"
+        useNativeValidation="false"
+        autocomplete="off">
+</material-input>
+<material-input
+        #description
+        label="{{descriptionStr}}"
+        ngModel="{{todoDescription}}"
+        (inputText)="todoDescription"
+        [error]="(todoAddEditBloc.todoErrorStream | async) == 1 ? descriptionErrString : ''"
+        autoFocus floatingLabel style="width:100%"
+        type="text"
+        useNativeValidation="false"
+        autocomplete="off">
+</material-input>
+<material-button
+        animated
+        raised
+        role="button"
+        class="blue"
+        (trigger)="addUpdate(title.inputText, description.inputText)">
+    {{saveStr}}
+</material-button>
+
+<base-bloc></base-bloc>

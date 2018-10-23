@@ -1,0 +1,33 @@
+<material-input
+    #username
+    label="{{userNameLabel}}"
+    ngModel="{{(loginBloc.usernameStream | async) == null ? '' : (loginBloc.usernameStream | async)}}"
+    (inputKeyPress)="loginBloc.usernameSink.add($event)"
+    [error]="(loginBloc.loginErrorStream | async) == 0 ? userNameErrString : ''"
+    autoFocus floatingLabel style="width:100%"
+    type="text"
+    useNativeValidation="false"
+    autocomplete="off section-login email">
+</material-input>
+<material-input
+    #password
+    label="{{passwordLabel}}"
+    ngModel="{{(loginBloc.passwordStream | async) == null ? '' : (loginBloc.passwordStream | async)}}"
+    (inputKeyPress)="loginBloc.passwordSink.add($event)"
+    [error]="(loginBloc.loginErrorStream | async) == 1 ? passwordErrString : ''"
+    autoFocus floatingLabel style="width:100%"
+    type="password"
+    useNativeValidation="false"
+    autocomplete="off section-login password">
+</material-input>
+<material-button
+    animatedw
+    raised
+    role="button"
+    class="blue"
+    (trigger)="loginBloc.loginSink.add(true)">
+    {{signIn}}
+</material-button>
+
+<base-bloc></base-bloc>
+

@@ -1,0 +1,15 @@
+name: bloc
+description: Bloc Dart package.
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  rxdart: "^0.18.1"
+  tuple: "^1.0.1"
+  meta: ^1.1.6
+
+dev_dependencies:
