@@ -4,10 +4,6 @@ import 'package:bloc/src/bloc/session.dart';
 
 class BaseBloc {
 
-  Session session;
-
-  BaseBloc(this.session);
-
   final BehaviorSubject<bool> _progressVisible = BehaviorSubject<bool>(seedValue: false);
   final BehaviorSubject<String> _error = BehaviorSubject<String>(seedValue: "");
 

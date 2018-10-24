@@ -9,8 +9,9 @@ import 'package:bloc/src/repository/firestore/repository/todo_repository.dart';
 abstract class TodoListBloc extends BaseBloc {
 
   ToDoRepository _toDoRepository;
+  Session session;
 
-  TodoListBloc(this._toDoRepository, Session session) : super(session){
+  TodoListBloc(this._toDoRepository, this.session) {
     _todoAddUpdate.stream.listen(_addUpdateTodo);
     _todoChangeDone.stream.listen(_changeDone);
     _todoDelete.stream.listen(_deleteTodo);

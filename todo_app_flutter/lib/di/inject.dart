@@ -31,7 +31,7 @@ class Injection {
     //Bloc
     injector.map<LoginBloc>((i) => LoginBlocImpl(_preferencesInterface, injector.get<Session>()), isSingleton: false);
     injector.map<TodoListBloc>((i) => TodoListBlocImpl(injector.get<ToDoRepository>(), injector.get<Session>()), isSingleton: false);
-    injector.map<TodoAddEditBloc>((i) => TodoAddEditBlocImpl(injector.get<ToDoRepository>(), injector.get<Session>()), isSingleton: false);
+    injector.map<TodoAddEditBloc>((i) => TodoAddEditBlocImpl(injector.get<ToDoRepository>()), isSingleton: false);
   }
 }
 

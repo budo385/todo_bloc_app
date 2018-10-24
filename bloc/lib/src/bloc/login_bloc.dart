@@ -9,8 +9,9 @@ abstract class LoginBloc extends BaseBloc {
 
   final String _emailDomain = "@digital-nomad.hr";
   PreferencesInterface _preferencesInterface;
+  Session session;
 
-  LoginBloc(this._preferencesInterface, Session session) : super(session) {
+  LoginBloc(this._preferencesInterface, this.session){
     _loginSubject.stream.listen(_handleLogin);
     if(_preferencesInterface.defaultUsername != null)
       usernameSink.add(_preferencesInterface.defaultUsername);

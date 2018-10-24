@@ -19,14 +19,22 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     super.initState();
-    _loginBloc.usernameStream.listen((username) => _usernameController.text = username );
-    _loginBloc.passwordStream.listen((password) => _passwordController.text = password );
+    getSavedUsername();
+
+    _loginBloc.usernameStream.first.then( (username) => _usernameController.text = username );
+
+    _loginBloc.passwordStream.isEmpty.then((empty) {
+      if(empty)
+        _passwordController.text = "";
+    });
 
     _loginBloc.session.isSignedIn.listen((isSignedIn) {
       if(isSignedIn && context != null)
         Navigator.of(context).pushReplacementNamed('/todos');
     });
   }
+
+  void getSavedUsername() async => _usernameController.text = await _loginBloc.usernameStream.first;
 
   @override
   void dispose() {
@@ -52,6 +60,7 @@ class _LoginState extends State<Login> {
                   stream: _loginBloc.loginErrorStream,
                   builder: (BuildContext context, AsyncSnapshot errorSnapshot) {
                     return TextField(
+                      onChanged: (text) => _loginBloc.usernameSink.add(text),
                       decoration: InputDecoration(hintText: Localization.of(context).username, labelText: Localization.of(context).username, errorText: errorSnapshot.data == 0 ? Localization.of(context).usernameEmpty : null),
                       controller: _usernameController,
                     );
@@ -63,6 +72,7 @@ class _LoginState extends State<Login> {
                   builder: (BuildContext context, AsyncSnapshot errorSnapshot) {
                     return TextField(
                       obscureText: true,
+                      onChanged: (text) => _loginBloc.passwordSink.add(text),
                       decoration: InputDecoration(hintText: Localization.of(context).password, labelText: Localization.of(context).password, errorText: errorSnapshot.data == 1 ? Localization.of(context).passwordEmpty : null),
                       controller: _passwordController,
                     );
@@ -73,8 +83,6 @@ class _LoginState extends State<Login> {
                   child: MaterialButton(
                     color: Theme.of(context).buttonColor,
                     onPressed: () {
-                      _loginBloc.usernameSink.add(_usernameController.text);
-                      _loginBloc.passwordSink.add(_passwordController.text);
                       _loginBloc.loginSink.add(true);
                     },
                     child: Text(Localization.of(context).login),

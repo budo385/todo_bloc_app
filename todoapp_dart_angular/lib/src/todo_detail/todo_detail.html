@@ -1,8 +1,8 @@
 <material-input
         #title
         label="{{titleStr}}"
-        ngModel="{{todoTitle}}"
-        (inputText)="todoTitle"
+        ngModel="{{(todoAddEditBloc.titleStream | async) == null ? '' : (todoAddEditBloc.titleStream | async)}}"
+        (inputKeyPress)="todoAddEditBloc.titleSink.add($event)"
         [error]="(todoAddEditBloc.todoErrorStream | async) == 0 ? titleErrString : ''"
         autoFocus floatingLabel style="width:100%"
         type="text"
@@ -12,8 +12,8 @@
 <material-input
         #description
         label="{{descriptionStr}}"
-        ngModel="{{todoDescription}}"
-        (inputText)="todoDescription"
+        ngModel="{{(todoAddEditBloc.descriptionStream | async) == null ? '' : (todoAddEditBloc.descriptionStream | async)}}"
+        (inputKeyPress)="todoAddEditBloc.descriptionSink.add($event)"
         [error]="(todoAddEditBloc.todoErrorStream | async) == 1 ? descriptionErrString : ''"
         autoFocus floatingLabel style="width:100%"
         type="text"
@@ -25,7 +25,7 @@
         raised
         role="button"
         class="blue"
-        (trigger)="addUpdate(title.inputText, description.inputText)">
+        (trigger)="todoAddEditBloc.addUpdateSink.add(true)">
     {{saveStr}}
 </material-button>
 

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:todo_app_flutter/di/inject.dart';
 import 'package:todo_app_flutter/localization.dart';
 import 'package:todo_app_flutter/ui/base/base_bloc_scaffold_widget.dart';
-import 'package:tuple/tuple.dart';
 
 class TodoAddEdit extends StatefulWidget {
 
@@ -27,7 +26,7 @@ class _TodoAddEditState extends State<TodoAddEdit>{
   @override
   void initState() {
     super.initState();
-    _todoAddEditBloc.todoStream.listen((todo) {
+    _todoAddEditBloc.todoStream.first.then((todo) {
       _titleController.text = todo.title;
       _descriptionController.text = todo.description;
     });
@@ -50,7 +49,7 @@ class _TodoAddEditState extends State<TodoAddEdit>{
         AppBar(
           title: Text(Localization.of(context).todo),
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.done), onPressed: () => _todoAddEditBloc.titleDescrSink.add(Tuple2(_titleController.text, _descriptionController.text)),),
+            IconButton(icon: Icon(Icons.done), onPressed: () => _todoAddEditBloc.addUpdateSink.add(true),),
           ],
         ),
         SingleChildScrollView(
@@ -63,6 +62,7 @@ class _TodoAddEditState extends State<TodoAddEdit>{
                     stream: _todoAddEditBloc.todoErrorStream,
                     builder: (BuildContext context, AsyncSnapshot errorSnapshot) {
                       return TextField(
+                        onChanged: (text) => _todoAddEditBloc.titleSink.add(text),
                         decoration: InputDecoration(hintText: Localization.of(context).title, labelText: Localization.of(context).title, errorText: errorSnapshot.data == 0 ? Localization.of(context).titleEmpty : null),
                         controller: _titleController,
                       );
@@ -76,6 +76,7 @@ class _TodoAddEditState extends State<TodoAddEdit>{
                       builder: (BuildContext context, AsyncSnapshot errorSnapshot) {
                         return TextField(
                           maxLines: 20,
+                          onChanged: (text) => _todoAddEditBloc.descriptionSink.add(text),
                           decoration: InputDecoration(hintText: Localization.of(context).description, labelText: Localization.of(context).description, errorText: errorSnapshot.data == 1 ? Localization.of(context).descriptionEmpty : null),
                           controller: _descriptionController,
                         );

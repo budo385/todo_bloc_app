@@ -44,19 +44,9 @@ class TodoDetailComponent implements OnDestroy, AfterChanges {
   String titleErrString = "Title required!";
   String descriptionErrString = "Description required!";
   String saveStr = "Save";
-  String todoTitle = "";
-  String todoDescription = "";
 
   TodoDetailComponent(this.todoAddEditBloc){
     closeDetailStream =  todoAddEditBloc.closeDetailStream;
-    todoAddEditBloc.todoStream.listen((todo){
-      todoTitle = todo.title;
-      todoDescription = todo.description;
-    });
-  }
-
-  void addUpdate(String title, String description){
-    todoAddEditBloc.titleDescrSink.add(Tuple2(title, description));
   }
 
   @override
