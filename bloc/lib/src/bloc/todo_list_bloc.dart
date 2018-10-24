@@ -36,14 +36,13 @@ class TodoListBloc extends BaseBloc {
     showProgress.add(true);
     _toDoRepository.getToDos()
         .listen((todosList) {
-      todosSink.add(todosList);
-      showProgress.add(false);
-    },
+          todosSink.add(todosList);
+          showProgress.add(false);
+          },
         onError: (err) {
           showProgress.add(false);
           error.add(err.toString());
         });
-
   }
 
   void _addUpdateTodo(TodoBloc todoBloc){

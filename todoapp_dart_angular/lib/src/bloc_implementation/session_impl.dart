@@ -1,12 +1,13 @@
 import 'dart:async';
-import 'package:firebase/firebase.dart';
+
 import 'package:bloc/bloc.dart';
+import 'package:firebase/firebase.dart';
+import 'package:firebase/firestore.dart';
 
-class SessionBlocImpl extends Session {
+class SessionImpl extends Session {
 
-  Auth _auth;
-
-  SessionBlocImpl(this._auth, Endpoints endpoints) : super(endpoints);
+  Auth _auth = auth();
+  Firestore _firestore = firestore();
 
   @override
   Future<String> signIn(String username, String password) {
@@ -17,4 +18,10 @@ class SessionBlocImpl extends Session {
   void logout() {
     _auth.signOut();
   }
+
+  @override
+  CollectionReference get todoCollectionEndpoint => userCollectionEndpoint.doc(this.userId).collection(todoCollectionName);
+
+  @override
+  CollectionReference get userCollectionEndpoint => _firestore.collection(userCollectionName);
 }

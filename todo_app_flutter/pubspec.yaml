@@ -22,7 +22,7 @@ dependencies:
   firebase_auth: ^0.6.2+1
   cloud_firestore: ^0.8.2+1
   tuple: ^1.0.1
-  flutter_simple_dependency_injection: any
+  flutter_simple_dependency_injection: ^0.0.5
   package_info: ^0.3.2
   shared_preferences: ^0.4.2
   meta: ^1.1.6

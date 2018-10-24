@@ -60,7 +60,7 @@ class LoginBloc extends BaseBloc {
     Observable.fromFuture(session.signIn(correctUsername, passw))
         .doOnDone( () => showProgress.add(false) )
         .listen( (firebaseUserId) {
-          session.endpoints.userId = firebaseUserId;
+          session.userId = firebaseUserId;
           _saveDefaultUsername(username);
           session.signedIn.add(true);
           },

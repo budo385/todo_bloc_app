@@ -4,6 +4,10 @@
 
 .packages
 .pub/
+pubspec.lock
+
+android/
+ios/
 
 build/
 ios/.generated/

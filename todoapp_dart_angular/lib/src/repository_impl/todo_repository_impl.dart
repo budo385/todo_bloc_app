@@ -3,7 +3,7 @@ import 'package:rxdart/rxdart.dart';
 
 class ToDoRepositoryImpl extends ToDoRepository {
 
-  ToDoRepositoryImpl(Session session) : super(session.endpoints);
+  ToDoRepositoryImpl(Endpoints endpoints) : super(endpoints);
 
   @override
   Observable<List<TodoBloc>> getToDos() {

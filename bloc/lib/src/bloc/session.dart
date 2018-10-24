@@ -1,12 +1,18 @@
 import 'dart:async';
+import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:bloc/src/bloc/endpoints.dart';
 
-abstract class Session {
+abstract class Session<C> implements Endpoints {
 
-  Endpoints endpoints;
+  //Collections.
+  @protected
+  final String userCollectionName = "users";
+  @protected
+  final String todoCollectionName = "todos";
+  String userId;
 
-  Session(this.endpoints){
+  Session(){
     _isSignedIn.stream.listen((signedIn) {
       if(!signedIn) _logout();
     });
@@ -17,10 +23,11 @@ abstract class Session {
   Sink<bool> get signedIn => _isSignedIn.sink;
 
   Future<String> signIn(String username, String password);
+  @protected
   void logout();
 
   void _logout() {
     logout();
-    endpoints.logout();
+    userId = null;
   }
 }
