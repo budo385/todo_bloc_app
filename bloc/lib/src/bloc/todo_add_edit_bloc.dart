@@ -7,7 +7,7 @@ import 'package:bloc/src/bloc/model/todo_bloc.dart';
 import 'package:bloc/src/bloc/session.dart';
 import 'package:bloc/src/repository/firestore/repository/todo_repository.dart';
 
-abstract class TodoAddEditBloc extends BaseBloc {
+class TodoAddEditBloc extends BaseBloc {
 
   ToDoRepository _toDoRepository;
   TodoAddEditBloc(this._toDoRepository) {

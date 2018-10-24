@@ -8,9 +8,6 @@ import 'package:todo_app_flutter/bloc_impl/endpoints_impl.dart';
 import 'package:todo_app_flutter/bloc_impl/session_bloc_impl.dart';
 import 'package:todo_app_flutter/repository_impl/preferences_interface_impl.dart';
 import 'package:todo_app_flutter/repository_impl/todo_repository_impl.dart';
-import 'package:todo_app_flutter/bloc_impl/login_bloc_impl.dart';
-import 'package:todo_app_flutter/bloc_impl/todo_add_edit_bloc_impl.dart';
-import 'package:todo_app_flutter/bloc_impl/todo_list_bloc_impl.dart';
 
 class Injection {
 
@@ -29,9 +26,9 @@ class Injection {
     //Repository
     injector.map<ToDoRepository>((i) => ToDoRepositoryImpl(injector.get<Endpoints>()), isSingleton: false);
     //Bloc
-    injector.map<LoginBloc>((i) => LoginBlocImpl(_preferencesInterface, injector.get<Session>()), isSingleton: false);
-    injector.map<TodoListBloc>((i) => TodoListBlocImpl(injector.get<ToDoRepository>(), injector.get<Session>()), isSingleton: false);
-    injector.map<TodoAddEditBloc>((i) => TodoAddEditBlocImpl(injector.get<ToDoRepository>()), isSingleton: false);
+    injector.map<LoginBloc>((i) => LoginBloc(_preferencesInterface, injector.get<Session>()), isSingleton: false);
+    injector.map<TodoListBloc>((i) => TodoListBloc(injector.get<ToDoRepository>(), injector.get<Session>()), isSingleton: false);
+    injector.map<TodoAddEditBloc>((i) => TodoAddEditBloc(injector.get<ToDoRepository>()), isSingleton: false);
   }
 }
 

@@ -5,7 +5,7 @@ import 'package:bloc/src/bloc/session.dart';
 import 'package:bloc/src/repository/preferences/preferences_interface.dart';
 import 'package:rxdart/rxdart.dart';
 
-abstract class LoginBloc extends BaseBloc {
+class LoginBloc extends BaseBloc {
 
   final String _emailDomain = "@digital-nomad.hr";
   PreferencesInterface _preferencesInterface;

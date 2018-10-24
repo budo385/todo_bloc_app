@@ -2,7 +2,6 @@ import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_forms/angular_forms.dart';
 import 'package:bloc/bloc.dart';
-import 'package:todoapp/src/bloc_implementation/login_bloc_impl.dart';
 import 'package:todoapp/src/base/base_bloc_component.dart';
 
 @Component(
@@ -18,7 +17,7 @@ import 'package:todoapp/src/base/base_bloc_component.dart';
   ],
   providers: [
     overlayBindings,
-    ClassProvider(LoginBloc, useClass: LoginBlocImpl),
+    ClassProvider(LoginBloc),
     ExistingProvider(BaseBloc, LoginBloc)
   ],
   pipes: [commonPipes],

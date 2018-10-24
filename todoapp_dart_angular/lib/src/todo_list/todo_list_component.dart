@@ -2,7 +2,6 @@ import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:bloc/bloc.dart';
 import 'package:todoapp/src/base/base_bloc_component.dart';
-import 'package:todoapp/src/bloc_implementation/todo_list_bloc_impl.dart';
 import 'package:todoapp/src/repository_impl/todo_repository_impl.dart';
 import 'package:todoapp/src/todo_detail/todo_detail.dart';
 
@@ -23,7 +22,7 @@ import 'package:todoapp/src/todo_detail/todo_detail.dart';
   ],
   providers: [
     ClassProvider(ToDoRepository, useClass: ToDoRepositoryImpl),
-    ClassProvider(TodoListBloc, useClass: TodoListBlocImpl),
+    ClassProvider(TodoListBloc),
     ExistingProvider(BaseBloc, TodoListBloc)
   ],
   pipes: [commonPipes],

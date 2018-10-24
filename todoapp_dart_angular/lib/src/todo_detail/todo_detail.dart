@@ -4,10 +4,8 @@ import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_forms/angular_forms.dart';
 import 'package:bloc/bloc.dart';
-import 'package:todoapp/src/bloc_implementation/todo_add_edit_bloc_impl.dart';
-import 'package:todoapp/src/repository_impl/todo_repository_impl.dart';
 import 'package:todoapp/src/base/base_bloc_component.dart';
-import 'package:tuple/tuple.dart';
+import 'package:todoapp/src/repository_impl/todo_repository_impl.dart';
 
 @Component(
   selector: 'todo-detail',
@@ -23,7 +21,7 @@ import 'package:tuple/tuple.dart';
   providers: [
     overlayBindings,
     ClassProvider(ToDoRepository, useClass: ToDoRepositoryImpl),
-    ClassProvider(TodoAddEditBloc, useClass: TodoAddEditBlocImpl),
+    ClassProvider(TodoAddEditBloc),
     ExistingProvider(BaseBloc, TodoAddEditBloc)
   ],
   pipes: [commonPipes],
