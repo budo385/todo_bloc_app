@@ -1,7 +1,8 @@
 import 'dart:async';
 
 abstract class PreferencesInterface{
-//Preferences
+
+  @protected
   final DEFAULT_USERNAME = "DEFAULT_USERNAME";
 
   Future initPreferences();

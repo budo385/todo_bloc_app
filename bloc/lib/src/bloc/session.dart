@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:bloc/src/bloc/endpoints.dart';
 
-abstract class Session<C> implements Endpoints {
+abstract class Session implements Endpoints {
 
   //Collections.
   @protected
