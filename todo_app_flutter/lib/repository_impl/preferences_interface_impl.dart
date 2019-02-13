@@ -9,8 +9,8 @@ class PreferencesInterfaceImpl extends PreferencesInterface {
   Future initPreferences() async => _prefs = await SharedPreferences.getInstance();
 
   @override
-  void setDefaultUsername(String username) => _prefs.setString(DEFAULT_USERNAME, username);
+  void setDefaultUsername(String username) => _prefs.setString(default_username, username);
 
   @override
-  String get defaultUsername => _prefs.getString(DEFAULT_USERNAME);
+  String get defaultUsername => _prefs.getString(default_username);
 }

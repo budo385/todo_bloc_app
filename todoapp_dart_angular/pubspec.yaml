@@ -17,6 +17,7 @@ dependencies:
   googleapis_auth: ^0.2.5+2
   service_worker: ^0.2.3
   sass: ^1.5.0
+  meta: ^1.1.6
   bloc:
     path: ../bloc
 

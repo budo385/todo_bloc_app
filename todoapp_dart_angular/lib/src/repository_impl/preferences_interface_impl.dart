@@ -12,10 +12,10 @@ class PreferencesInterfaceImpl extends PreferencesInterface {
   }
 
   @override
-  String get defaultUsername => storage[DEFAULT_USERNAME];
+  String get defaultUsername => storage[default_username];
 
   @override
   void setDefaultUsername(String username) {
-    storage[DEFAULT_USERNAME] = username;
+    storage[default_username] = username;
   }
 }
