@@ -11,8 +11,8 @@ class Todo {
 
   Todo.fromJson(Map<String, dynamic> json)
       : done = json['done'],
-        created = json['created'],
-        ended = json['ended'],
+        created = DateTime.fromMillisecondsSinceEpoch(json['created']),
+        ended = json['ended'] != null ? DateTime.fromMicrosecondsSinceEpoch(json['ended']) : null,
         title = json['title'],
         description = json['description'];
 
@@ -26,8 +26,8 @@ class Todo {
   Map<String, dynamic> toJson() =>
       {
         'done' : done,
-        'created' :created,
-        'ended' :ended,
+        'created' : created?.millisecondsSinceEpoch,
+        'ended' : ended?.millisecondsSinceEpoch,
         'title' :title,
         'description' :description
       };

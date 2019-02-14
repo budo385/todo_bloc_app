@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>175688444480-3h7akernt4si8ag86dkh5omrl7lo098e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.175688444480-3h7akernt4si8ag86dkh5omrl7lo098e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDw-BOkKbyvFzQBUmuBNRL0mFYedXD6yvY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>175688444480</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>hr.digitalnomad.todoAppFlutter</string>
+	<key>PROJECT_ID</key>
+	<string>todo-list-c45ee</string>
+	<key>STORAGE_BUCKET</key>
+	<string>todo-list-c45ee.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:175688444480:ios:5531151d10e0a4bd</string>
+	<key>DATABASE_URL</key>
+	<string>https://todo-list-c45ee.firebaseio.com</string>
+</dict>
+</plist>

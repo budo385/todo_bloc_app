@@ -11,7 +11,7 @@ packages:
   bloc:
     dependency: "direct main"
     description:
-      path: "..\\bloc"
+      path: "../bloc"
       relative: true
     source: path
     version: "0.0.1"
