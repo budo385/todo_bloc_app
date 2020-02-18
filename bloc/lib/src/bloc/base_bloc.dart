@@ -4,8 +4,8 @@ import 'package:bloc/src/bloc/session.dart';
 
 class BaseBloc {
 
-  final BehaviorSubject<bool> _progressVisible = BehaviorSubject<bool>(seedValue: false);
-  final BehaviorSubject<String> _error = BehaviorSubject<String>(seedValue: "");
+  final BehaviorSubject<bool> _progressVisible = BehaviorSubject.seeded(false);
+  final BehaviorSubject<String> _error = BehaviorSubject.seeded("");
 
   Sink<String> get error => _error.sink;
   Stream<String> get errorStream => _error.stream;

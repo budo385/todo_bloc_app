@@ -6,7 +6,7 @@ import 'package:todo_app_flutter/ui/login/login.dart';
 import 'package:todo_app_flutter/ui/todo_list/todo_list.dart';
 
 void main() async {
-
+  WidgetsFlutterBinding.ensureInitialized();
   await Injection.initInjection();
   runApp(MyApp());
 }

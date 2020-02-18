@@ -10,8 +10,8 @@ abstract class ToDoRepository {
 
   ToDoRepository(this.endpoints);
 
-  Observable<List<TodoBloc>> getToDos();
-  Observable<TodoBloc> getTodo(String todoId);
-  Observable<dynamic> addUpdateToDo(TodoBloc todoBloc);
-  Observable<void> deleteToDoBloc(String todoId);
+  Stream<List<TodoBloc>> getToDos();
+  Stream<TodoBloc> getTodo(String todoId);
+  Stream<dynamic> addUpdateToDo(TodoBloc todoBloc);
+  Stream<void> deleteToDoBloc(String todoId);
 }
