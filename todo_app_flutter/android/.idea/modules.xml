@@ -3,12 +3,24 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/android-app.iml" filepath="$PROJECT_DIR$/app/android-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cloud_firestore-0.7.4/android/cloud_firestore.iml" filepath="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cloud_firestore-0.7.4/android/cloud_firestore.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.2+1/android/cloud_firestore-0.13.2+1-android-cloud_firestore.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.2+1/android/cloud_firestore-0.13.2+1-android-cloud_firestore.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.0+3/android/cloud_firestore_web.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.0+3/android/cloud_firestore_web.iml" />
       <module fileurl="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_auth-0.5.20/android/firebase_auth.iml" filepath="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_auth-0.5.20/android/firebase_auth.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.4/android/firebase_auth-0.15.4-android-firebase_auth.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.4/android/firebase_auth-0.15.4-android-firebase_auth.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.2/android/firebase_auth_web.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.2/android/firebase_auth_web.iml" />
       <module fileurl="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_core-0.2.5+1/android/firebase_core.iml" filepath="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_core-0.2.5+1/android/firebase_core.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.4/android/firebase_core-0.4.4-android-firebase_core.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.4/android/firebase_core-0.4.4-android-firebase_core.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/android/firebase_core_web.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/android/firebase_core_web.iml" />
       <module fileurl="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/package_info-0.3.2/android/package_info.iml" filepath="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/package_info-0.3.2/android/package_info.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.0+13/android/package_info-0.4.0+13-android-package_info.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.0+13/android/package_info-0.4.0+13-android-package_info.iml" />
       <module fileurl="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/shared_preferences-0.4.3/android/shared_preferences.iml" filepath="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/shared_preferences-0.4.3/android/shared_preferences.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.6+1/android/shared_preferences-0.5.6+1-android-shared_preferences.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.6+1/android/shared_preferences-0.5.6+1-android-shared_preferences.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+5/android/shared_preferences_macos.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+5/android/shared_preferences_macos.iml" />
+      <module fileurl="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+3/android/shared_preferences_web.iml" filepath="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+3/android/shared_preferences_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/todo_app_flutter-android.iml" filepath="$PROJECT_DIR$/todo_app_flutter-android.iml" />
     </modules>
   </component>
 </project>

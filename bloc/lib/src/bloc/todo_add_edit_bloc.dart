@@ -37,7 +37,7 @@ class TodoAddEditBloc extends BaseBloc {
   final BehaviorSubject<int> _todoError = BehaviorSubject<int>();
   Stream<int> get todoErrorStream => _todoError.stream;
 
-  final BehaviorSubject<bool> _closeDetail = BehaviorSubject<bool>(seedValue: false);
+  final BehaviorSubject<bool> _closeDetail = BehaviorSubject.seeded(false);
   Stream<bool> get closeDetailStream => _closeDetail.stream;
 
   //Private

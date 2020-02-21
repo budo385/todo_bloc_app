@@ -18,18 +18,18 @@ class LoginBloc extends BaseBloc {
   }
 
   //Public
-  final _username = BehaviorSubject<String>(seedValue: "");
+  final _username = BehaviorSubject.seeded("");
   Sink<String> get usernameSink => _username.sink;
   Stream<String> get usernameStream => _username.stream;
 
-  final _password = BehaviorSubject<String>(seedValue: "");
+  final _password = BehaviorSubject.seeded("");
   Sink<String> get passwordSink => _password.sink;
   Stream<String> get passwordStream => _password.stream;
 
   final _loginSubject = BehaviorSubject<bool>();
   Sink<bool> get loginSink => _loginSubject.sink;
 
-  final _loginError = BehaviorSubject<int>(seedValue: -1);
+  final _loginError = BehaviorSubject.seeded(-1);
   Stream<int> get loginErrorStream => _loginError.stream;
 
   //Private
@@ -57,7 +57,7 @@ class LoginBloc extends BaseBloc {
 
     final correctUsername = username + _emailDomain;
     showProgress.add(true);
-    Observable.fromFuture(session.signIn(correctUsername, passw))
+    Stream.fromFuture(session.signIn(correctUsername, passw))
         .doOnDone( () => showProgress.add(false) )
         .listen( (firebaseUserId) {
           session.userId = firebaseUserId;

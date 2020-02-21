@@ -13,7 +13,7 @@ class SessionImpl extends Session {
 
   @override
   Future<String> signIn(String username, String password) {
-    return _auth.signInWithEmailAndPassword(email: username, password: password).then( (firebaseUser) => firebaseUser.uid );
+    return _auth.signInWithEmailAndPassword(email: username, password: password).then( (authResult) => authResult.user.uid);
   }
 
   @protected
